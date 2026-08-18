@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>La Rikota | Hamburguesas a la parrilla en Rivera, Huila</title>
+<meta name="description" content="Hamburguesas artesanales a la parrilla en pan o patacón. La Rikota, Rivera - Huila. Pide por WhatsApp, valorado 4.8/5 por nuestros clientes.">
+<meta name="theme-color" content="#111111">
+
+<!-- Open Graph -->
+<meta property="og:title" content="La Rikota | Rivera, Huila">
+<meta property="og:description" content="Hamburguesas artesanales a la parrilla. Tú eliges: pan o patacón. Pide por WhatsApp.">
+<meta property="og:type" content="restaurant.menu">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader-mark">
+    <span class="loader-bun"></span>
+    <span class="loader-patty"></span>
+    <span class="loader-bun loader-bun--bottom"></span>
+  </div>
+  <p class="loader-text">LA RIKOTA</p>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#inicio" class="navbar__logo" aria-label="La Rikota - Inicio">
+      <svg class="navbar__logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="var(--mostaza)" stroke="var(--negro)" stroke-width="2"/>
+        <path d="M11 21c0-4 5-7 13-7s13 3 13 7H11z" fill="var(--negro)"/>
+        <rect x="10.5" y="21.5" width="27" height="3.4" rx="1.7" fill="var(--negro)"/>
+        <path d="M12 27c0 3.5 5 6.2 12 6.2s12-2.7 12-6.2H12z" fill="var(--negro)"/>
+      </svg>
+      <span class="navbar__logo-text">LA RIKOTA</span>
+    </a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#menu" class="nav-link">Menú</a>
+      <a href="#destacado" class="nav-link">Destacado</a>
+      <a href="#galeria" class="nav-link">Galería</a>
+      <a href="#resenas" class="nav-link">Reseñas</a>
+      <a href="#ubicacion" class="nav-link">Ubicación</a>
+      <a href="https://wa.me/573176601733?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn btn--sm btn--primary navbar__cta">
+        <i class="fa-brands fa-whatsapp"></i> Pedir
+      </a>
+    </nav>
+
+    <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="hero__stripe" aria-hidden="true"></div>
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__content">
+    <p class="eyebrow reveal" data-reveal="fade">Rivera · Huila · Colombia</p>
+    <h1 class="hero__title reveal" data-reveal="up">
+      PAN O PATACÓN.<br><span class="hero__title-accent">TÚ DECIDES.</span>
+    </h1>
+    <p class="hero__subtitle reveal" data-reveal="up" data-reveal-delay="1">
+      Hamburguesas artesanales a la parrilla, con carne, pollo o cerdo, servidas como se te antoje: en pan clásico o en patacón crocante. Así se come rico en Rivera.
+    </p>
+    <div class="hero__actions reveal" data-reveal="up" data-reveal-delay="2">
+      <a href="https://wa.me/573176601733?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+        <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+      </a>
+      <a href="#menu" class="btn btn--outline btn--lg">Ver menú</a>
+    </div>
+    <div class="hero__rating reveal" data-reveal="fade" data-reveal-delay="3">
+      <span class="hero__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+      <span>4.8/5 en reseñas de clientes</span>
+    </div>
+  </div>
+  <a href="#menu" class="hero__scroll" aria-label="Bajar al menú">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal="fade">Nuestro menú</p>
+    <h2 class="section-title reveal" data-reveal="up">TODO LO QUE SE TE ANTOJE</h2>
+
+    <!-- Signature widget: pan vs patacón -->
+    <div class="bun-toggle reveal" data-reveal="up">
+      <div class="bun-toggle__copy">
+        <span class="bun-toggle__eyebrow">ELIGE TU BASE</span>
+        <h3>Así funciona en La Rikota</h3>
+        <p>En La Rikota puedes pedir tu hamburguesa con <strong>pan</strong> o con <strong>patacón</strong>. Son dos opciones diferentes y <strong>pueden tener precios diferentes</strong>.</p>
+        <p class="bun-toggle__hint"><i class="fa-solid fa-circle-info"></i> Selecciona una opción para resaltar sus precios en el menú.</p>
+      </div>
+      <div class="bun-toggle__widget">
+        <div class="bun-toggle__choice-grid" role="tablist" aria-label="Elegir base de la hamburguesa">
+          <button class="bun-toggle__choice bun-toggle__choice--pan is-active" data-bun="pan" role="tab" aria-selected="true">
+            <span class="bun-toggle__choice-art" aria-hidden="true"><i class="fa-solid fa-burger"></i></span>
+            <span class="bun-toggle__choice-name">PAN</span>
+            <span class="bun-toggle__choice-desc">Pan artesanal</span>
+            <span class="bun-toggle__choice-state">SELECCIONADO</span>
+          </button>
+          <button class="bun-toggle__choice bun-toggle__choice--patacon" data-bun="patacon" role="tab" aria-selected="false">
+            <span class="bun-toggle__choice-art" aria-hidden="true"><i class="fa-solid fa-compact-disc"></i></span>
+            <span class="bun-toggle__choice-name">PATACÓN</span>
+            <span class="bun-toggle__choice-desc">Plátano crocante</span>
+            <span class="bun-toggle__choice-state">ELEGIR</span>
+          </button>
+        </div>
+        <div class="bun-toggle__selected" aria-live="polite">
+          <span>BASE ELEGIDA</span>
+          <strong id="bunSelectedLabel">PAN</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category tabs -->
+    <div class="menu-tabs reveal" data-reveal="fade" role="tablist" aria-label="Categorías del menú">
+      <button class="menu-tab is-active" data-target="cat-hamburguesas">Hamburguesas</button>
+      <button class="menu-tab" data-target="cat-delicias">Más delicias</button>
+      <button class="menu-tab" data-target="cat-bebidas">Bebidas</button>
+    </div>
+
+    <!-- HAMBURGUESAS -->
+    <div class="menu-panel is-active" id="cat-hamburguesas">
+      <div class="menu-grid">
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="callejera"><img src="img/burger-callejera.jpg" alt="Burger Callejera de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger Callejera</h3></div>
+            <p>Carne de res (150gr), cebolla grillé, tocineta, queso, maíz tierno, vegetales frescos, papita ripio, salsa de maíz, papa a la francesa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $19.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $19.000</span></div>
+            <button class="menu-card__order" data-name="Burger Callejera">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="chicken"><img src="img/burger-american-chicken.jpg" alt="Burger American Chicken de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger American Chicken</h3></div>
+            <p>Carne de pollo apanada (150gr), cebolla grillé, maíz tierno, queso, vegetales frescos, papita ripio, salsa de maíz, papa a la francesa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $20.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $20.000</span></div>
+            <button class="menu-card__order" data-name="Burger American Chicken">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="pork"><img src="img/burger-pork.jpg" alt="Burger Pork de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger Pork</h3></div>
+            <p>Carne de cerdo (150gr), cebolla grillé, maíz tierno, queso, vegetales frescos, papita ripio, salsa de maíz, papa a la francesa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $19.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $19.000</span></div>
+            <button class="menu-card__order" data-name="Burger Pork">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="vaquera"><img src="img/burger-vaquera.jpg" alt="Burger Vaquera de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger Vaquera</h3></div>
+            <p>Carne de res (150gr), cebolla grillé, tocineta, queso, chorizo, maíz tierno, huevo frito, vegetales frescos, papita ripio, salsa de maíz, salsa de la casa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $24.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $24.000</span></div>
+            <button class="menu-card__order" data-name="Burger Vaquera">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="sweet"><img src="img/burger-sweet.jpg" alt="Burger Sweet de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger Sweet</h3></div>
+            <p>Carne de res (150gr), salsa de la casa, queso, rodaja de piña melada, tocineta, vegetales frescos y papa a la francesa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $22.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $23.000</span></div>
+            <button class="menu-card__order" data-name="Burger Sweet">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="santisima"><img src="img/burger-santisima.jpg" alt="Burger Santísima de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger Santísima</h3></div>
+            <p>Carne de res y carne de pollo apanado, cebolla grillé, tocineta, doble queso, maíz tierno, papita ripio, vegetales frescos, papa a la francesa, salsa de la casa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $24.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $25.000</span></div>
+            <button class="menu-card__order" data-name="Burger Santísima">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="power"><img src="img/burger-doble-power.jpg" alt="Burger Doble Power de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger Doble Power</h3></div>
+            <p>Doble carne de res (150gr), cebolla grillé, tocineta, huevo frito, doble queso, vegetales frescos, papita ripio, papa a la francesa, salsa de la casa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $24.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $25.000</span></div>
+            <button class="menu-card__order" data-name="Burger Doble Power">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card menu-card--featured reveal" data-reveal="up">
+          <span class="menu-card__badge">La más grande</span>
+          <div class="menu-card__media" data-food="xl"><img src="img/burger-xl.jpg" alt="Burger XL de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger XL</h3></div>
+            <p>Carne de res (150gr), pollo apanado (150gr) y carne de cerdo (150gr), cebolla grillé, tocineta, triple queso, vegetales frescos, papita ripio, papa a la francesa, salsa de la casa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $27.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $28.000</span></div>
+            <button class="menu-card__order" data-name="Burger XL">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="orale"><img src="img/burger-orale.jpg" alt="Burger Órale de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger Órale</h3></div>
+            <p>Carne de res (150gr), guacamole, doritos, jalapeño, cebolla grillé, tocineta, queso, vegetales frescos, papita ripio, papa a la francesa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $22.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $22.000</span></div>
+            <button class="menu-card__order" data-name="Burger Órale">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="toxica"><img src="img/burger-la-toxica.jpg" alt="Burger La Tóxica de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger "La Tóxica"</h3></div>
+            <p>Carne de res (150gr), queso cheddar, tocineta, crips de cebolla, salsa cheddar y aros de cebolla, papa a la francesa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $23.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $23.000</span></div>
+            <button class="menu-card__order" data-name="Burger La Tóxica">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="gringa"><img src="img/burger-la-gringa.jpg" alt="Burger La Gringa de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Burger "La Gringa"</h3></div>
+            <p>Carne de res (150gr), tajadas de maduro, tocineta, cebolla grillé, queso cheddar, huevo frito, papa a la francesa.</p>
+            <div class="menu-card__prices"><span class="price-option price-option--pan" data-base="pan">Pan $23.000</span><span class="price-option price-option--patacon" data-base="patacon">Patacón $23.000</span></div>
+            <button class="menu-card__order" data-name="Burger La Gringa">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- MAS DELICIAS -->
+    <div class="menu-panel" id="cat-delicias">
+      <div class="menu-grid">
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="costillas"><img src="img/costillas-bbq.jpg" alt="Costillas de cerdo BBQ de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Costillas de Cerdo BBQ</h3></div>
+            <p>500gr de costillitas de cerdo a la parrilla, con papa a la francesa, yuquitas crocantes, ensalada de la casa y banano en crema.</p>
+            <div class="menu-card__prices"><span>$42.000</span></div>
+            <button class="menu-card__order" data-name="Costillas de Cerdo BBQ">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="lomo"><img src="img/lomo-cerdo.jpg" alt="Lomo de cerdo de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Lomo de Cerdo</h3></div>
+            <p>400gr de lomo de cerdo a la parrilla, con papa a la francesa, yuquitas crocantes, ensalada de la casa y banano en crema.</p>
+            <div class="menu-card__prices"><span>$42.000</span></div>
+            <button class="menu-card__order" data-name="Lomo de Cerdo">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="pechuga"><img src="img/pechuga-champinon.jpg" alt="Pechuga a la plancha en salsa de champiñón de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Pechuga en Salsa de Champiñón</h3></div>
+            <p>400gr de pechuga a la parrilla bañada en salsa de champiñón, con papa a la francesa, yuquitas crocantes, ensalada de la casa y banano en crema.</p>
+            <div class="menu-card__prices"><span>$45.000</span></div>
+            <button class="menu-card__order" data-name="Pechuga en Salsa de Champiñón">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="babybeef"><img src="img/baby-beef.jpg" alt="Baby Beef de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Baby Beef</h3></div>
+            <p>400gr de lomo fino a la parrilla, con papa a la francesa, yuquitas crocantes, ensalada de la casa y banano en crema.</p>
+            <div class="menu-card__prices"><span>$45.000</span></div>
+            <button class="menu-card__order" data-name="Baby Beef">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="pannecook"><img src="img/panne-cook.jpg" alt="Panne Cook de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Panne Cook</h3></div>
+            <p>Trozos de pollo, maíz tierno, champiñones, tocineta, salsa de champiñones y queso fundido.</p>
+            <div class="menu-card__prices"><span>$30.000</span></div>
+            <button class="menu-card__order" data-name="Panne Cook">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="suizo"><img src="img/suizo.jpg" alt="Suizo de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Suizo</h3></div>
+            <p>Patacón, suizo, cebolla grillé, maíz tierno, salsa de la casa, queso fundido y papita ripio.</p>
+            <div class="menu-card__prices"><span>$22.000</span></div>
+            <button class="menu-card__order" data-name="Suizo">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="choriperro"><img src="img/choriperro.jpg" alt="Choriperro de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Choriperro</h3></div>
+            <p>Chorizo asado a la parrilla, maíz tierno, tocineta, salsa tártara, papita ripio, salsa de maíz y papa a la francesa.</p>
+            <div class="menu-card__prices"><span>$19.000</span></div>
+            <button class="menu-card__order" data-name="Choriperro">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="nuggets"><img src="img/nuggets.jpg" alt="Nuggets de pollo de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Nuggets de Pollo</h3></div>
+            <p>7 unidades de nuggets de pollo, acompañados de papa a la francesa y ensalada de la casa.</p>
+            <div class="menu-card__prices"><span>$22.000</span></div>
+            <button class="menu-card__order" data-name="Nuggets de Pollo">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="salchipapa"><img src="img/salchipapa.jpg" alt="Salchipapa de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Salchipapa</h3></div>
+            <p>Salchicha americana, papa a la francesa, maíz tierno, lechuga y queso doble.</p>
+            <div class="menu-card__prices"><span>$19.000</span></div>
+            <button class="menu-card__order" data-name="Salchipapa">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="perrocaliente"><img src="img/perro-caliente.jpg" alt="Perro caliente de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Perro Caliente</h3></div>
+            <p>Salchicha americana asada a la parrilla, maíz tierno, queso, tocineta, papita ripio, salsa de maíz, tártara y papa a la francesa.</p>
+            <div class="menu-card__prices"><span>$19.000</span></div>
+            <button class="menu-card__order" data-name="Perro Caliente">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+
+        <article class="menu-card reveal" data-reveal="up">
+          <div class="menu-card__media" data-food="perrochingon"><img src="img/perro-chingon.jpg" alt="Perro Chingón de La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"></div>
+          <div class="menu-card__body">
+            <div class="menu-card__head"><h3>Perro Chingón</h3></div>
+            <p>Salchicha americana asada a la parrilla, guacamole, doritos, jalapeño, queso, tocineta y papa a la francesa.</p>
+            <div class="menu-card__prices"><span>$19.000</span></div>
+            <button class="menu-card__order" data-name="Perro Chingón">Pedir <i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="addons reveal" data-reveal="up">
+        <h4>Adicionales</h4>
+        <ul class="addons__list">
+          <li><span>Yuquitas crocantes</span><span>$10.000</span></li>
+          <li><span>Papa francesa</span><span>$10.000</span></li>
+          <li><span>Ensalada</span><span>$10.000</span></li>
+          <li><span>Aritos de cebolla</span><span>$10.000</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BEBIDAS -->
+    <div class="menu-panel" id="cat-bebidas">
+      <div class="drinks-grid">
+        <div class="drinks-col reveal" data-reveal="up">
+          <h4><i class="fa-solid fa-glass-water"></i> Jugos</h4>
+          <ul>
+            <li><span>Maracuyá</span><span>$10.000</span></li>
+            <li><span>Cholupa</span><span>$10.000</span></li>
+            <li><span>Limonada natural</span><span>$10.000</span></li>
+            <li><span>Ginger cerezada</span><span>$10.000</span></li>
+            <li><span>Limonada cerezada</span><span>$12.000</span></li>
+            <li><span>Limonada de coco</span><span>$12.000</span></li>
+          </ul>
+        </div>
+        <div class="drinks-col reveal" data-reveal="up" data-reveal-delay="1">
+          <h4><i class="fa-solid fa-beer-mug-empty"></i> Cervezas</h4>
+          <ul>
+            <li><span>Águila</span><span>$6.000</span></li>
+            <li><span>Águila Light</span><span>$6.000</span></li>
+            <li><span>Club Colombia</span><span>$6.000</span></li>
+          </ul>
+          <h4 class="drinks-col__spacer"><i class="fa-solid fa-bottle-water"></i> Sodas italianas</h4>
+          <ul>
+            <li><span>Frutos rojos</span><span>$13.000</span></li>
+            <li><span>Frutos amarillos</span><span>$13.000</span></li>
+          </ul>
+        </div>
+        <div class="drinks-col reveal" data-reveal="up" data-reveal-delay="2">
+          <h4><i class="fa-solid fa-bottle-droplet"></i> Otras bebidas</h4>
+          <ul>
+            <li><span>Gaseosa personal</span><span>$5.000</span></li>
+            <li><span>Gaseosa 1.5L</span><span>$12.000</span></li>
+            <li><span>Gaseosa 2.5L</span><span>$15.000</span></li>
+            <li><span>Agua botella</span><span>$5.000</span></li>
+            <li><span>Jugo Hit</span><span>$5.000</span></li>
+            <li><span>Soda</span><span>$5.000</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ DESTACADO ============ -->
+<section class="featured" id="destacado">
+  <div class="featured__bg" aria-hidden="true"></div>
+  <div class="container featured__grid">
+    <div class="featured__visual reveal" data-reveal="left">
+      <div class="featured__plate">
+        <div class="featured__ring"></div>
+        <div class="stack stack--big">
+          <div class="stack__layer stack__layer--top"></div>
+          <div class="stack__layer stack__layer--lettuce"></div>
+          <div class="stack__layer stack__layer--cheese"></div>
+          <div class="stack__layer stack__layer--patty"></div>
+          <div class="stack__layer stack__layer--patty stack__layer--patty2"></div>
+          <div class="stack__layer stack__layer--patty stack__layer--patty3"></div>
+          <div class="stack__layer stack__layer--bottom"></div>
+        </div>
+      </div>
+    </div>
+    <div class="featured__copy reveal" data-reveal="right">
+      <span class="menu-card__badge featured__badge">La más grande de la carta</span>
+      <h2 class="section-title">BURGER XL</h2>
+      <p>Tres carnes, un solo antojo: res, pollo apanado y cerdo, con triple queso, tocineta y papita ripio, coronada con salsa de la casa. La elegimos como nuestra recomendada porque reúne todo lo que hace grande a una hamburguesa de La Rikota, en una sola tabla.</p>
+      <div class="featured__prices">
+        <div><span class="featured__price-label">Pan</span><span class="featured__price">$27.000</span></div>
+        <div><span class="featured__price-label">Patacón</span><span class="featured__price">$28.000</span></div>
+      </div>
+      <a href="https://wa.me/573176601733?text=Hola%2C%20quiero%20pedir%20una%20Burger%20XL" target="_blank" rel="noopener" class="btn btn--primary">
+        <i class="fa-brands fa-whatsapp"></i> Pedir la Burger XL
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section class="gallery" id="galeria">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal="fade">Galería</p>
+    <h2 class="section-title reveal" data-reveal="up">ASÍ SE VIVE LA RIKOTA</h2>
+    <p class="gallery__note reveal" data-reveal="up">Espacios reservados para fotografía real del local y los platos — ver notas de reemplazo en la sección final de este mensaje.</p>
+    <div class="gallery__grid">
+      <div class="gallery__item gallery__item--big reveal" data-reveal="up"><img src="img/gallery-local.jpg" alt="Local de La Rikota en Rivera" loading="lazy" onerror="this.classList.add('img-missing')"><span class="gallery__tag">El local</span></div>
+      <div class="gallery__item reveal" data-reveal="up" data-reveal-delay="1"><img src="img/gallery-burger-xl.jpg" alt="Burger XL servida" loading="lazy" onerror="this.classList.add('img-missing')"><span class="gallery__tag">Burger XL</span></div>
+      <div class="gallery__item reveal" data-reveal="up" data-reveal-delay="2"><img src="img/gallery-patacon.jpg" alt="Hamburguesa en patacón" loading="lazy" onerror="this.classList.add('img-missing')"><span class="gallery__tag">Base patacón</span></div>
+      <div class="gallery__item reveal" data-reveal="up" data-reveal-delay="1"><img src="img/gallery-parrilla.jpg" alt="Carnes a la parrilla" loading="lazy" onerror="this.classList.add('img-missing')"><span class="gallery__tag">A la parrilla</span></div>
+      <div class="gallery__item reveal" data-reveal="up" data-reveal-delay="2"><img src="img/gallery-bebidas.jpg" alt="Limonadas y jugos naturales" loading="lazy" onerror="this.classList.add('img-missing')"><span class="gallery__tag">Bebidas</span></div>
+      <div class="gallery__item reveal" data-reveal="up" data-reveal-delay="3"><img src="img/gallery-ambiente.jpg" alt="Clientes disfrutando en La Rikota" loading="lazy" onerror="this.classList.add('img-missing')"><span class="gallery__tag">Ambiente</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POR QUE ELEGIRNOS ============ -->
+<section class="why">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal="fade">¿Por qué La Rikota?</p>
+    <h2 class="section-title reveal" data-reveal="up">RAZONES QUE NOS RECOMIENDAN SOLAS</h2>
+    <div class="why__grid">
+      <div class="why__card reveal" data-reveal="up">
+        <i class="fa-solid fa-bacon"></i>
+        <h3>Pan o patacón, a tu manera</h3>
+        <p>Toda la carta se sirve en pan clásico o en patacón crocante, al mismo precio. Tú eliges cómo te la comes.</p>
+      </div>
+      <div class="why__card reveal" data-reveal="up" data-reveal-delay="1">
+        <i class="fa-solid fa-fire-burner"></i>
+        <h3>A la parrilla, no de freidora</h3>
+        <p>Costillas, lomo, pechuga y baby beef se preparan a la parrilla, con guarniciones caseras como banano en crema y yuquitas.</p>
+      </div>
+      <div class="why__card reveal" data-reveal="up" data-reveal-delay="2">
+        <i class="fa-solid fa-weight-hanging"></i>
+        <h3>Porciones que rinden</h3>
+        <p>Nuestros clientes lo repiten en sus reseñas: tamaños generosos y buen balance frente al precio.</p>
+      </div>
+      <div class="why__card reveal" data-reveal="up" data-reveal-delay="3">
+        <i class="fa-solid fa-people-roof"></i>
+        <h3>Ambiente para celebrar</h3>
+        <p>Un espacio agradable para ir en pareja, con amigos o en familia, incluso para ocasiones especiales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEÑAS ============ -->
+<section class="testimonials" id="resenas">
+  <div class="container">
+    <p class="eyebrow reveal" data-reveal="fade">Lo que dicen de nosotros</p>
+    <h2 class="section-title reveal" data-reveal="up">4.8/5 EN RESEÑAS DE GOOGLE</h2>
+    <p class="testimonials__source reveal" data-reveal="up">Reseñas reales de clientes publicadas en Google.</p>
+    <div class="testimonials__grid">
+      <blockquote class="testimonial reveal" data-reveal="up">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>Karol Lisbeth Ovalle destaca las hamburguesas con patacón, las porciones generosas, los buenos precios, el lugar y el servicio.</p>
+        <footer>Karol Lisbeth Ovalle · Reseña publicada en Google</footer>
+      </blockquote>
+      <blockquote class="testimonial reveal" data-reveal="up" data-reveal-delay="1">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>Natalia Quintero cuenta que disfrutó el Baby Beef, la Burger “La Gringa”, las bebidas, el ambiente y el servicio.</p>
+        <footer>Natalia Quintero · Reseña publicada en Google</footer>
+      </blockquote>
+      <blockquote class="testimonial reveal" data-reveal="up" data-reveal-delay="2">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>Yinna Paola Valencia Murcia recomienda La Rikota para parejas, grupos de amigos y familias, y resalta el ambiente, la comida y la atención.</p>
+        <footer>Yinna Paola Valencia Murcia · Reseña publicada en Google</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UBICACION ============ -->
+<section class="location" id="ubicacion">
+  <div class="container location__grid">
+    <div class="location__copy reveal" data-reveal="left">
+      <p class="eyebrow">Ubicación</p>
+      <h2 class="section-title">ENCUÉNTRANOS EN RIVERA</h2>
+      <ul class="location__list">
+        <li><i class="fa-solid fa-location-dot"></i> Cra. 7 #4-1, Rivera, Huila, Colombia</li>
+        <li><i class="fa-solid fa-phone"></i> 317 660 1733</li>
+        <li class="location__hours"><i class="fa-solid fa-clock"></i><span><strong>Horario</strong>
+          <span>Lunes: 6:00 PM – 11:00 PM</span>
+          <span>Martes: 6:00 PM – 11:00 PM</span>
+          <span>Miércoles: CERRADO</span>
+          <span>Jueves: 6:00 PM – 11:00 PM</span>
+          <span>Viernes: 6:00 PM – 12:00 AM</span>
+          <span>Sábado: 5:30 PM – 12:00 AM</span>
+          <span>Domingo: 5:30 PM – 12:00 AM</span>
+        </span></li>
+      </ul>
+      <a href="https://maps.app.goo.gl/4VPWG5xgyKZqZubU8" target="_blank" rel="noopener" class="btn btn--primary">
+        <i class="fa-solid fa-diamond-turn-right"></i> Cómo llegar
+      </a>
+    </div>
+    <div class="location__map reveal" data-reveal="right">
+      <iframe
+        title="Mapa de ubicación de La Rikota en Rivera, Huila"
+        src="https://www.google.com/maps?q=2.7784077,-75.2575085&z=18&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <span class="navbar__logo-text">LA RIKOTA</span>
+      <p>Hamburguesas artesanales a la parrilla. Rivera, Huila.</p>
+      <div class="footer__socials">
+        <a href="https://wa.me/573176601733" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/share/1EybRw3FBv/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/larikotaoficial?igsh=OWJ5M3h3NzI2dTFu" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Cra. 7 #4-1, Rivera, Huila</p>
+      <p><i class="fa-solid fa-phone"></i> 317 660 1733</p>
+    </div>
+    <div class="footer__col">
+      <h4>Horario</h4>
+      <div class="footer__hours">
+        <p><span>Lun</span><span>6:00 PM – 11:00 PM</span></p>
+        <p><span>Mar</span><span>6:00 PM – 11:00 PM</span></p>
+        <p><span>Mié</span><span>CERRADO</span></p>
+        <p><span>Jue</span><span>6:00 PM – 11:00 PM</span></p>
+        <p><span>Vie</span><span>6:00 PM – 12:00 AM</span></p>
+        <p><span>Sáb</span><span>5:30 PM – 12:00 AM</span></p>
+        <p><span>Dom</span><span>5:30 PM – 12:00 AM</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; <span id="year"></span> La Rikota, Rivera - Huila. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- ============ FLOATING ELEMENTS ============ -->
+<a href="https://wa.me/573176601733?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="fab fab--whatsapp" aria-label="Pedir por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+<button class="fab fab--top" id="backToTop" aria-label="Volver arriba">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
